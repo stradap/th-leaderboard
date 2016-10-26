@@ -1,0 +1,82 @@
+body {
+  background: #000000;
+  color: #FFFFFF;
+
+  .not-visible {
+    visibility: hidden;
+  }
+  .right {
+    float: right;
+  }
+
+  .transition {
+    -webkit-animation-name: tr_animation;
+    -webkit-animation-duration: 5s;
+    animation-name: tr_animation;
+    animation-duration: 5s;
+  }
+
+  .wrapper {
+    position: relative;
+
+    h1 {
+      border-bottom: 1rem solid #0a96c8;
+      padding-bottom: 1rem;
+      img {
+        width: 4vw;
+      }
+    }
+    .panel {
+      min-width: 90vw;
+      height: 90vh;
+      background: #1f242a;
+      padding: 2rem;
+      position: absolute;
+      top: 50vh;
+      left: 50vw;
+      margin-right: -50%;
+      transform: translate(-50%, -50%);
+      overflow: hidden;
+    }
+
+    table {
+      width: 100%;
+
+      tr {
+        height: 15vh;
+
+        td {
+          text-align: center;
+          width: 25%;
+          font-size: 4vh;
+
+          img {
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+            margin-right: 5%;
+            width: 10rem;
+            height: 10rem;
+            padding: 1vw;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes tr_animation {
+    0%   {opacity: 0.25;}
+    25%  {opacity: 0.5;}
+    50%  {opacity: 0.75;}
+    100% {opacity: 1;}
+}
+
+/* Standard syntax */
+@keyframes tr_animation {
+    0%   {opacity: 0.25;}
+    25%  {opacity: 0.5;}
+    50%  {opacity: 0.75;}
+    100% {opacity: 1;}
+}

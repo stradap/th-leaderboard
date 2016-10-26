@@ -1,0 +1,18 @@
+<div class="wrapper">
+  <div class="panel">
+    <h1><img ng-src="{{mainCtrl.trophy}}"/> LEADERBOARD <img class="right" src="http://trainheroic.com/wp-content/themes/trainheroic2/assets/images/logo-heroic@2x.png"/></h1>
+    <table>
+      <tr ng-repeat="athlete in mainCtrl.showAthletes" class="transition">
+        <td>
+          {{athlete.rank}} <img ng-src="{{athlete.profileImg}}" alt="{{athlete.userFirstName}} {{athlete.userLastName}}" />
+        </td>
+        <td>
+          {{athlete.userFirstName}} {{athlete.userLastName}}
+        </td>
+        <td>
+          {{athlete.tests[0]}}
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
